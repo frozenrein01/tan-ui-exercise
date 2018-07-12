@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercise3</title>		
+</head>
+<body>
+
+	<script type="text/javascript">
+
+		function reverser(sentence) {
+			var newSentence = [];
+			if(typeof sentence !== "string") {
+				return false;
+			}
+
+			var splitted = sentence.trim().split(" ");
+			for(var x=0; x<=splitted.length-1;x++) {
+				var word = splitted[x];
+
+				// If we're in the EVEN index+1, reverse this
+				if(((x+1) % 2) === 0) {
+					word = word.split("").reverse().join("");
+				} 
+
+				newSentence.push(word);
+			}
+
+			return newSentence.join(" ");
+		}
+	</script>
+
+</body>
+</html>
